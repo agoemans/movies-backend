@@ -1,0 +1,1 @@
+export * from './actor/get-actors-in-movie'
