@@ -1,9 +1,9 @@
-import {Repository } from './repository';
-import {CastModel, DirectorModel, GenreInMovieModel, MovieModel, MoviesByGenreModel, WritersModel} from "../models";
+import { Repository } from './repository';
+import { MovieModel } from '../models';
 
 export class InMemory implements Repository {
-    query = ( sql: string, args?: any ): Promise<unknown> => {
-        return ;
+    query = (sql: string, args?: any): Promise<unknown> => {
+        return;
     };
 
     getAllMovies = async () => [];
@@ -23,42 +23,42 @@ export class InMemory implements Repository {
         if (!movie) {
             throw new Error('movie not found');
         }
-        return movie as MoviesByGenreModel;
+        return [];
     };
 
-    getGenresInMovie = async (type: string) => {
+    getMoviesOfActor = async (title: string) => {
         const movie = {};
 
         if (!movie) {
             throw new Error('movie not found');
         }
-        return movie as GenreInMovieModel;
+        return [];
     };
 
-    getActorsInMovie = async (type: string) => {
+    getMoviesByDirector = async (title: string) => {
         const movie = {};
 
         if (!movie) {
             throw new Error('movie not found');
         }
-        return movie as CastModel;
+        return [];
     };
 
-    getWritersForMovie = async (type: string) => {
+    getMoviesByWriter = async (title: string) => {
         const movie = {};
 
         if (!movie) {
             throw new Error('movie not found');
         }
-        return movie as WritersModel;
+        return [];
     };
 
-    getDirectorForMovie = async (type: string) => {
+    getMoviesByCertificate = async (title: string) => {
         const movie = {};
 
         if (!movie) {
             throw new Error('movie not found');
         }
-        return movie as DirectorModel;
+        return [];
     };
 }

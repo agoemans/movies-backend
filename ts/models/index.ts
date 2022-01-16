@@ -6,6 +6,6 @@ export * from './director';
 export * from './producer';
 export * from './tagline';
 export * from './release-date';
-export * from './genres-in-movie';
+export * from './movies-of-actor';
 export * from './certificate';
 export * from './movies-by-genre'

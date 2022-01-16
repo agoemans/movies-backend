@@ -1,17 +1,17 @@
-import {CastModel, GenreInMovieModel, MoviesByGenreModel, MovieModel, WritersModel, DirectorModel} from "../models";
+import { MovieModel } from '../models';
 
 export interface Repository {
     getAllMovies: () => Promise<MovieModel[]>;
 
     getMovieByName: (title: string) => Promise<MovieModel>;
 
-    getMoviesByGenre: (type: string) => Promise<MoviesByGenreModel>;
+    getMoviesByGenre: (type: string) => Promise<MovieModel[]>;
 
-    getGenresInMovie: (type: string) => Promise<GenreInMovieModel>;
+    getMoviesOfActor: (title: string) => Promise<MovieModel[]>;
 
-    getActorsInMovie: (title: string) => Promise<CastModel>;
+    getMoviesByDirector: (title: string) => Promise<MovieModel[]>;
 
-    getWritersForMovie: (title: string) => Promise<WritersModel>;
+    getMoviesByWriter: (title: string) => Promise<MovieModel[]>;
 
-    getDirectorForMovie: (title: string) => Promise<DirectorModel>;
+    getMoviesByCertificate: (title: string) => Promise<MovieModel[]>;
 }
